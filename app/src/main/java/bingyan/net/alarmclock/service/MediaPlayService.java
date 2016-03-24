@@ -55,7 +55,7 @@ public class MediaPlayService extends Service implements SensorEventListener {
             public void run() {
                 startAlarm(info);
             }
-        });
+        }).start();
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         boolean isScreenOn;
