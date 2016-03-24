@@ -50,7 +50,12 @@ public class MediaPlayService extends Service implements SensorEventListener {
         position = intent.getIntExtra(ALARM_CLOCK_POSITION, -1);
 
         // 开始闹铃和振动
-        startAlarm(info);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                startAlarm(info);
+            }
+        });
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         boolean isScreenOn;
