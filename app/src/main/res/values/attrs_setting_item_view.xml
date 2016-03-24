@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="SettingItemView">
+        <attr name="setting_title" format="string"/>
+        <attr name="setting_subtitle" format="string"/>
+        <attr name="setting_is_switch" format="boolean"/>
+    </declare-styleable>
+</resources>

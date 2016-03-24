@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/activity_setting_ll"
+              app:layout_behavior="@string/appbar_scrolling_view_behavior"
+              tools:showIn="@layout/activity_alarm_settings"
+              tools:context=".activity.AlarmSettingsActivity">
+
+    <bingyan.net.alarmclock.view.SettingItemView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/setting_item_view_bg"
+        app:setting_title="重复"
+        app:setting_subtitle="只响一次"
+        app:setting_is_switch="false"
+        android:id="@+id/activity_setting_repeat_mode"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <bingyan.net.alarmclock.view.SettingItemView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/setting_item_view_bg"
+        app:setting_title="铃声"
+        app:setting_subtitle="默认铃声"
+        app:setting_is_switch="false"
+        android:id="@+id/activity_setting_ringtone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <bingyan.net.alarmclock.view.SettingItemView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/activity_setting_vibrate"
+        android:background="@drawable/setting_item_view_bg"
+        app:setting_title="振动"
+        app:setting_subtitle="响铃时振动"
+        app:setting_is_switch="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <bingyan.net.alarmclock.view.SettingItemView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/activity_setting_remark"
+        android:background="@drawable/setting_item_view_bg"
+        app:setting_title="备注"
+        app:setting_subtitle="闹钟备注"
+        app:setting_is_switch="false"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+        <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_setting_time_picker"/>
+    </ScrollView>
+
+</LinearLayout>
